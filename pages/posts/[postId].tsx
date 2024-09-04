@@ -61,6 +61,6 @@ export const getStaticProps = async (context: any) => {
       posts,
       company,
     },
-    revalidate: 120,
+    revalidate: 1600,
   };
 };
