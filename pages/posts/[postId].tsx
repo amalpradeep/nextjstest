@@ -41,7 +41,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: "blocking", // If false, shows a 404 for any paths not returned by `getStaticPaths`
+    fallback: "true",
   };
 };
 
