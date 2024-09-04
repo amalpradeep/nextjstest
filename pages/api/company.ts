@@ -1,23 +1,34 @@
 // pages/api/user.ts
 import type { NextApiRequest, NextApiResponse } from "next";
+import db from "../db/database";
 
 type Data = {
   name: string;
 };
 
-let companyName = "Initial Name"; 
-
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>,
+  res: NextApiResponse<Data>
 ) {
   if (req.method === "GET") {
-    res.status(200).json({ name: companyName });
+    // Fetch the company name from the database
+    const stmt = db.prepare("SELECT name FROM company ORDER BY id DESC LIMIT 1");
+    const result = stmt.get();
+
+    if (result) {
+      res.status(200).json({ name: result.name });
+    } else {
+      res.status(404).json({ name: "No company name found" });
+    }
   } else if (req.method === "POST") {
     const { name } = req.body;
+
     if (name) {
-      companyName = name;
-      res.status(200).json({ name: companyName });
+      // Insert or update the company name in the database
+      const insertStmt = db.prepare("INSERT INTO company (name) VALUES (?)");
+      insertStmt.run(name);
+
+      res.status(200).json({ name });
     } else {
       res.status(400).json({ name: "Invalid name" });
     }
