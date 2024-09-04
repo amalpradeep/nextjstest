@@ -41,7 +41,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: "true",
+    fallback: true, // If false, shows a 404 for any paths not returned by `getStaticPaths`
   };
 };
 
