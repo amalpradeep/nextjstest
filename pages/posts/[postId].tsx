@@ -50,7 +50,7 @@ export const getStaticProps = async (context: any) => {
 
   const res = await fetch(`https://dummyjson.com/posts/${postId}`);
   const companyRes = await fetch(
-    'https://main.d12c1r85loi0f3.amplifyapp.com/api/company',
+    'https://nextjstest-six-gamma.vercel.app/api/company',
   );
 
   const company = await companyRes.json();
