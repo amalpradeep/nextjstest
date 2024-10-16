@@ -15,8 +15,8 @@ const SSGPage = ({ postsList }: any) => {
         <meta property="og:title" content="Home Page - My Website" />
         <meta property="og:description" content="Welcome to the home page of my website." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="hhttps://nextjstest-six-gamma.vercel.app" />
-        <meta property="og:image" content="hhttps://nextjstest-six-gamma.vercel.app/images/og.jpeg" />
+        <meta property="og:url" content="https://nextjstest-six-gamma.vercel.app" />
+        <meta property="og:image" content="https://nextjstest-six-gamma.vercel.app/og.jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
@@ -24,7 +24,7 @@ const SSGPage = ({ postsList }: any) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Home Page - My Website" />
         <meta name="twitter:description" content="Welcome to the home page of my website." />
-        <meta name="twitter:image" content="hhttps://nextjstest-six-gamma.vercel.app/images/og.jpeg" />
+        <meta name="twitter:image" content="https://nextjstest-six-gamma.vercel.app/og.jpeg" />
         <meta name="twitter:site" content="@mytwitterhandle" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
