@@ -75,6 +75,6 @@ const createPopupIframe = (src) => {
 
 window.addEventListener('message', (event) => {
     if (event.data?.action === 'openPopup') {
-        createPopupIframe('http://localhost:3000/embeded/1/checkout');
+        createPopupIframe('https://alpha.aftontickets.com/embeded/1/checkout');
     }
 });
